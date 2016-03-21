@@ -113,7 +113,7 @@ else
 				StringCount--;				
 				if (StringCount==0)
 					{
-					Format(TickerMsg,sizeof(TickerMsg)+16,"\4%s",Msg);
+					Format(TickerMsg,sizeof(TickerMsg)+16,"\n\4%s\n",Msg);
 					_GetTickerLine=true;
 					}
 				}

@@ -95,8 +95,7 @@ else
 		{
 		TrimString(Msg);	
 		if (strlen(Msg)==0) continue; 	
-		if (Msg[0]=='/' &&  Msg[1]=='/') continue; 	
-		if (Msg[0]==';' ) continue; 	
+		if (Msg[0]=='\\' &&  Msg[1]=='\\') continue; 	
 		StringCount++;
 		}		
 	StringCount=GetRandomInt(0,StringCount);
@@ -107,9 +106,7 @@ else
 			while (!IsEndOfFile(FILE) && ReadFileLine(FILE, Msg, sizeof(Msg)))
 				{
 				TrimString(Msg);	
-				if (strlen(Msg)==0) continue; 	
-				if (Msg[0]=='/' &&  Msg[1]=='/') continue; 	
-				if (Msg[0]==';' ) continue; 
+				if (strlen(Msg)==0) continue; 		
 				StringCount--;				
 				if (StringCount==0)
 					{

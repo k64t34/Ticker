@@ -1,7 +1,7 @@
 //-> Игнорировать пустые строки
 //->Игнорировать строки начинающиеся с //
 //->Звук при сообщение
-//#define DEBUG 
+#define DEBUG 
 #define DEBUG_LOG 1
 #define DEBUG_PLAYER "K64t"
 #define PLUGIN_NAME  "Ticker"
@@ -96,7 +96,6 @@ else
 		TrimString(Msg);	
 		if (strlen(Msg)==0) continue; 	
 		if (Msg[0]=='/' &&  Msg[1]=='/') continue; 	
-		if (Msg[0]==';' ) continue; 	
 		StringCount++;
 		}		
 	StringCount=GetRandomInt(0,StringCount);
@@ -106,10 +105,9 @@ else
 			{
 			while (!IsEndOfFile(FILE) && ReadFileLine(FILE, Msg, sizeof(Msg)))
 				{
-				TrimString(Msg);	
-				if (strlen(Msg)==0) continue; 	
-				if (Msg[0]=='/' &&  Msg[1]=='/') continue; 	
-				if (Msg[0]==';' ) continue; 
+					TrimString(Msg);	
+					if (strlen(Msg)==0) continue; 	
+					if (Msg[0]=='/' &&  Msg[1]=='/') continue; 	
 				StringCount--;				
 				if (StringCount==0)
 					{

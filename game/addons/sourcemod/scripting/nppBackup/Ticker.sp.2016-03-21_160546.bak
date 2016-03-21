@@ -1,7 +1,7 @@
 //-> Игнорировать пустые строки
 //->Игнорировать строки начинающиеся с //
 //->Звук при сообщение
-//#define DEBUG 
+#define DEBUG 
 #define DEBUG_LOG 1
 #define DEBUG_PLAYER "K64t"
 #define PLUGIN_NAME  "Ticker"
@@ -113,7 +113,7 @@ else
 				StringCount--;				
 				if (StringCount==0)
 					{
-					Format(TickerMsg,sizeof(TickerMsg)+16,"\4%s",Msg);
+					Format(TickerMsg,sizeof(TickerMsg)+16,"\n\4%s\n",Msg);
 					_GetTickerLine=true;
 					}
 				}

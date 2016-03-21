@@ -93,10 +93,7 @@ else
 	int StringCount=0;
 	while (!IsEndOfFile(FILE) && ReadFileLine(FILE, Msg, sizeof(Msg)))
 		{
-		TrimString(Msg);	
 		if (strlen(Msg)==0) continue; 	
-		if (Msg[0]=='/' &&  Msg[1]=='/') continue; 	
-		if (Msg[0]==';' ) continue; 	
 		StringCount++;
 		}		
 	StringCount=GetRandomInt(0,StringCount);
@@ -106,13 +103,12 @@ else
 			{
 			while (!IsEndOfFile(FILE) && ReadFileLine(FILE, Msg, sizeof(Msg)))
 				{
-				TrimString(Msg);	
-				if (strlen(Msg)==0) continue; 	
-				if (Msg[0]=='/' &&  Msg[1]=='/') continue; 	
-				if (Msg[0]==';' ) continue; 
+				if (strlen(Msg)==0) continue; 		
 				StringCount--;				
 				if (StringCount==0)
 					{
+					TrimString(Msg);
+					if (strlen(Msg)==0
 					Format(TickerMsg,sizeof(TickerMsg)+16,"\4%s",Msg);
 					_GetTickerLine=true;
 					}

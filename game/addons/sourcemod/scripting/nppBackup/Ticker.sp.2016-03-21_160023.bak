@@ -1,7 +1,7 @@
 //-> Игнорировать пустые строки
 //->Игнорировать строки начинающиеся с //
 //->Звук при сообщение
-//#define DEBUG 
+#define DEBUG 
 #define DEBUG_LOG 1
 #define DEBUG_PLAYER "K64t"
 #define PLUGIN_NAME  "Ticker"

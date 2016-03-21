@@ -15,7 +15,7 @@ Include=..\smk64t\scripting\include;..\smk64t\sourcemod-1.7.3-git5301\include;..
 ;rcon_password="JAguar-1937.GB"
 rcon_address=10.80.1.44
 rcon_port=28015
-rcon_password="JA2PI."
+rcon_password="JA2PI"
 SRCDS_Folder=\\deploy2\c$\progra~1\srcds.css.87\cstrike\
 
 SRCDS_FTP=deploy2/srcds.css.87/cstrike/
